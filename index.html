@@ -20,7 +20,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            font-size: 11pt; 
+            font-size: 8pt; 
             line-height: 1.3; 
             width: 210mm; /* A4 width */
             height: 297mm; /* A4 height */
@@ -30,14 +30,19 @@
 
       
         .header {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 15px;
-        }
-        .header p {
-            margin: 0 0 3px 0;
-        }
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr; 
+    margin-bottom: 10px;
+}
+
+.patient-info, .doctor-info {
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.patient-details, .doctor-details {
+    text-align: left;
+    margin-right: 30px; 
+}
 
      
         .opdSection {
@@ -62,7 +67,7 @@
         .vitals-section-title {
             font-weight: bold;
             margin-bottom: 5px;
-            font-size: 12pt;
+            font-size: 8pt;
         }
         .vitals-row {
             display: flex;
@@ -99,7 +104,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 10pt; 
+            font-size: 7pt; 
         }
         table, th, td {
             border: none;
@@ -135,7 +140,7 @@
             <p>: Soumya Kanti Roy</p>
             <p>: Male, 28 years</p>
             <p>: 111210006057</p>
-            <p>: Vill & P.O - Madhabpur, P.S - Arambagh<br />Dist - Hooghly, PIN - 712413</p>
+            <p>: Vill & P.O - Madhabpur, P.S - Arambagh Dist - Hooghly, PIN - 712413</p>
         </div>
         <div class="doctor-info">
             <p><strong>Consultation Date</strong></p>
