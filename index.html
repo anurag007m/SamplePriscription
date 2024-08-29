@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Prescription</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11pt; 
+            line-height: 1.3; 
+            width: 210mm; /* A4 width */
+            height: 297mm; /* A4 height */
+            margin: 0 auto;
+            padding: 20mm; 
+        }
+
+      
+        .header {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .header p {
+            margin: 0 0 3px 0;
+        }
+
+     
+        .opdSection {
+            display: flex;
+            justify-content: center;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
+    
+        .section {
+            margin-bottom: 15px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+
+        .vitals-section-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 12pt;
+        }
+        .vitals-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .vital-item {
+            flex: 1;
+            margin-right: 10px;
+            
+        }
+        .vital-item:last-child {
+            margin-right: 0;
+        }
+
+        /* Investigation results styles */
+        .results {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 5px;
+        }
+        .result-item {
+            display: contents;
+        }
+        .label {
+            text-align: left;
+        }
+        .value {
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        /* Prescription table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10pt; 
+        }
+        table, th, td {
+            border: none;
+        }
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 3px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Signature styles */
+        .signature {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .doctor-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="patient-info">
+            <p><strong>Patient Name</strong></p>
+            <p><strong>Gender/Age</strong></p>
+            <p><strong>UHID</strong></p>
+            <p><strong>Address</strong></p>
+        </div>
+        <div class="patient-details">
+            <p>: Soumya Kanti Roy</p>
+            <p>: Male, 28 years</p>
+            <p>: 111210006057</p>
+            <p>: Vill & P.O - Madhabpur, P.S - Arambagh<br />Dist - Hooghly, PIN - 712413</p>
+        </div>
+        <div class="doctor-info">
+            <p><strong>Consultation Date</strong></p>
+            <p><strong>Department</strong></p>
+            <p><strong>Consultant Name</strong></p>
+            <p><strong>Registration No</strong></p>
+        </div>
+        <div class="doctor-details">
+            <p>: 10.08.2024</p>
+            <p>: Nephrology</p>
+            <p>: Dr. Pratik Das</p>
+            <p>: 51230 (WBMC)</p>
+        </div>
+    </div>
+
+    <div class="opdSection">
+        <div class="section-title">OPD CONSULTATION SHEET</div>
+    </div>
+
+    <div class="section">
+        <div class="vitals-section-title">VITALS</div>
+        <div class="vitals-row">
+            <div class="vital-item"><strong>Blood Pressure:</strong> 140/80 mmHg</div>
+            <div class="vital-item"><strong>Pulse:</strong> 70 bpm</div>
+            <div class="vital-item"><strong>SPO2:</strong> 100%</div>
+            <div class="vital-item"><strong>Temperature:</strong> 98.4°F</div>
+        </div>
+        <div class="vitals-row">
+            <div class="vital-item"><strong>Body Weight:</strong> 70 Kg</div>
+            <div class="vital-item"><strong>Height:</strong> 159 cm</div>
+            <div class="vital-item"><strong>BSA:</strong> 1.24m<sup>2</sup></div>
+            <div class="vital-item"><strong>BMI:</strong> 28.2 Kg/m<sup>2</sup></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">CLINICAL HISTORY</div>
+        <p>Review</p>
+        <p>H/O- surgery</p>
+        <p>AVF creation on</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">DIAGNOSIS</div>
+        <p>Hypertension, Diabetes Mellitus Type 2</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">INVESTIGATION RESULTS</div>
+        <div class="results">
+            <div class="result-item">
+                <span class="label">Haemoglobin:</span>
+                <span class="value">13.7</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Potassium:</span>
+                <span class="value">4.5</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Calcium:</span>
+                <span class="value">9.7</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Phosphate:</span>
+                <span class="value">4.5</span>
+            </div>
+            <div class="result-item">
+                <span class="label">Uric Acid:</span>
+                <span class="value">7.5</span>
+            </div>
+            <div class="result-item">
+                <span class="label">CRP:</span>
+                <span class="value">10.1</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">℞</div>
+        <table>
+            <tr>
+                <th>Medicine</th>
+                <th>Frequency</th>
+                <th>Timing - Duration</th>
+            </tr>
+            <tr>
+                <td>1) ARKAMIN 100MCG<br />Composition: Clonidine</td>
+                <td>1-1-1 Thrice daily</td>
+                <td>After Food - Till Next Visit</td>
+            </tr>
+            <tr>
+                <td>2) NICARDIA RETARD 20MG<br />Composition: Nifedipine</td>
+                <td>1-1-1 Thrice daily</td>
+                <td>After Food - Till Next Visit</td>
+            </tr>
+            <tr>
+                <td>3) DYTOR 20MG<br />Composition:</td>
+                <td>1-0-1 8am, 4pm</td>
+                <td>After Food - Till Next Visit</td>
+            </tr>
+            <tr>
+                <td>4) FEBUGET 40MG<br />Composition:</td>
+                <td>0-0-1<br />Once Daily At Bedtime</td>
+                <td>After Food - Till Next Visit</td>
+            </tr>
+            <tr>
+                <td>5) INJ EPOFIT 10K<br />Composition:</td>
+                <td>Once in a week</td>
+                <td>Subcutaneous - Till Next Visit</td>
+            </tr>
+            <tr>
+                <td>6) INJ ENCICARB 500MG<br />Composition:</td>
+                <td>Once in 2 weeks</td>
+                <td>IV Post HD - Till Next Visit</td>
+            </tr>
+            <tr>
+                <td>7) ECOSPRIN AV GOLD<br />Composition: Aspirin, Atorvastatin, Clopidogrel</td>
+                <td>0-1-0 Once Daily</td>
+                <td>After Food - Till Next Visit</td>
+            </tr>
+            <tr>
+                <td>8) INJ HUMAN ACTRAPID<br />Composition:</td>
+                <td>1-1-1-1<br />Subcutaneous - Four Times A Day</td>
+                <td>Before Food - Till Next Visit</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="section-title">ADVICE</div>
+        <p>Continue HD as per schedule</p>
+        <p>Low Potassium Renal Diet</p>
+        <p>Stitch removal on</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">INVESTIGATION ADVISED</div>
+        <p>Serum Creatinine, Serum Potassium, Haemoglobin, Serum Calcium, Serum Phosphorus, Serum Uric Acid, Chest X-Ray PA, ECG, Echocardiography</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">CROSS CONSULTATION</div>
+        <p>Dr. Keshab Sil, Nephrology</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">FOLLOW-UP</div>
+        <p>Follow up with Dr. Pratik Das, Nephrology on 30.08.2024</p>
+    </div>
+
+    <div class="signature">
+        <p><span class="doctor-name">Dr. Pratik Das</span><br />MD, DNB, DM (Nephrology)<br />51230 (WBMC)</p>
+    </div>
+</body>
+</html>
